@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('jangkenTop');
 });
+
+Route::get('/inspect', function (){
+    return view('inspection');
+});
+
+Route::get('/judge', function () {
+    return view('judge');
+});

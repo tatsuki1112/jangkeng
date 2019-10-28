@@ -1,0 +1,101 @@
+body {
+    font-family: 'Lato';
+    background-image: url("/image/fireback.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color:black;
+
+}
+
+
+.title {
+
+    font-size: 500%;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.insphilite {
+
+    font-size: 100%;
+    color: red;
+    font-weight: bolder;
+    font-family: serif;
+}
+
+
+
+.btn1 {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: white;
+    background: orange;
+    border-radius: 4px;
+    box-shadow: inset 0 2px rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: 'bold';
+    border: solid 2px orange;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px;
+
+}
+
+.btn2 {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: white;
+    background: #0584ec;
+    border-radius: 4px;
+    box-shadow: inset 0 2px rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: 'bold';
+    border: solid 2px #0584ec;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px;
+
+}
+.btn3 {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: white;
+    background: red;
+    border-radius: 4px;
+    box-shadow: inset 0 2px rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: 'bold';
+    border: solid 2px orange;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px;
+
+}
+
+
+.hilite {
+    font-family: serif;
+    color: red;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+
+.else {
+    /*font-family: serif;*/
+    font-size: 2em;
+    font-weight: bolder;
+    color: white;
+}
+
+h1 {
+    font-size: 200px;
+    color: white;
+}
