@@ -15,15 +15,15 @@
                 @csrf
                     <div class="form-row">
                         <div class="col-md-6">
-                            <input type="txt" id="player1" class="form-control" placeholder="おなまえ1">
+                            <input type="txt" id="player1" class="form-control form-control-lg" placeholder="おなまえ1">
                         </div>
                         <div class="col-md-6">
-                            <input type="txt" id="player2" class="form-control" placeholder="おなまえ2">
+                            <input type="txt" id="player2" class="form-control form-control-lg" placeholder="おなまえ2">
                         </div>
                     </div>
                     <br>
-                    <div class="form-gtoup">
-                            <input type="number" class="form-control mb2" id="trial" placeholder="回数を入力">
+                    <div class="form-group">
+                            <input type="number" class="form-control form-control-lg" id="trial" placeholder="回数を入力">
                         </div>
                     </div>
                     <br>
