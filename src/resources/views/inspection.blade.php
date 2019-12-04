@@ -25,18 +25,19 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                   
+                                <h2 class="modal-title" id="label">いま一番強いのは...</h2>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    
                                     <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                     <div class="modal-body">
                                     
-                                    <img src="{{ asset('/image/kairo2.png')}}" class='img-fluid mx-auto d-block'>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
+                                        <img src="{{ asset('/image/kairo2.png')}}" class='img-fluid mx-auto d-block'>
+                                        <br>
+                                        <br>
+                                        
+                                        
                                     </div>
                                 </div>
                             </div>
