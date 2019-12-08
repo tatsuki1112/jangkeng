@@ -12,7 +12,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 </head>
-<body id="app-layout" onLoad="testJS()">
+<body id="app-layout">
 
 
 

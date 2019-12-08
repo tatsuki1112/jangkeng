@@ -18,7 +18,8 @@
                     </div>
                     
                     <br>
-                    <button type="button" class="btn3" data-toggle="modal" data-target="#modal1">
+                    <!--<button type="button" class="btn3" data-toggle="modal" data-target="#modal1">-->
+                    <button type="button" class="btn3" onClick = "jangkeng();">
                         <span class='else'>じゃんけん!!!!</span>
                     </button>
 
