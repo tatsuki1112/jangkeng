@@ -11,7 +11,7 @@ function jangkeng() {
     }else if(trial > 0){
         alert("このページは、あなたのデバイスに"+trial+"回の計算を行わせます。回数によってはデバイスの動作が不安定になるなどの問題が発生するかもしれません。予めご了承ください");
         let result = jangkenning(trial);
-        htmlChange(result[6]);
+        htmlChange(result);
 
         $('#modal1').modal('show');
         
@@ -79,25 +79,37 @@ function jangkeng() {
         
         //console.log(opt);
 
-        return [cp1Win, cp2Win, gu, choki, pah, aiko, result];
+        return [cp1Win, cp2Win, gu, choki, pah, aiko, result, times];
         
     
     }
 
     function htmlChange(result) {
         let image;
-        if(result === "gu") {
+        let hand;
+        if(result[6] === "gu") {
             image = "guKairo.png";
-        } else if(result === "choki") {
+            hand = "グー";
+        } else if(result[6] === "choki") {
             image = "chokiKairo.png";
-        } else {
+            hand = "チョキ";
+        } else if(result[6] === "pah"){
             image = "pahKairo.png";
+            hand = "パー";
     
         }
         let src = $('.modal-body').children('img').attr('src');
         src = src.replace('kairo2.png', image);
         $('.modal-body').children('img').attr('src', src);
-    }
+        //document.getElementById('trialResult').innerHTML = "100";
+        $('.result > #trialResult').text(result[7]);
+        $('.result > #aikoResult').text(result[5]);
+        $('.result > #cp1Result').text(result[0]);
+        $('.result > #cp2Result').text(result[1]);
+        $('.result > #guResult').text(result[2]);
+        $('.result > #chokiResult').text(result[3]);
+        $('.result > #pahResult').text(result[4]);
+        }
     
 
     

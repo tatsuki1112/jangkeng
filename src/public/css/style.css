@@ -100,6 +100,7 @@ body {
     margin-left: auto;
     font-weight: bolder;
     font-family: serif;
+    font-size: 250%;
 }
 
 h1 {
@@ -107,3 +108,18 @@ h1 {
     color: white;
 }
 
+.modal-content{
+ background-color:#FFCC00;
+}
+
+.result {
+    text-align: center;
+    font-family: serif;
+    font-weight: bolder;
+}
+.hiliteResult {
+    text-align: center;
+    font-family: serif;
+    font-weight: bolder;
+    color:red;
+}
