@@ -10,8 +10,8 @@
                 </button>
             </div>
                 <div class="modal-body">
-                
-                    <img src="{{ asset('/image/kairo2.png')}}" class='img-fluid mx-auto d-block'>
+                <!--"{{asset('/image/kairo2.png')}}"-->
+                    <img id = "jangkengResultImage" src="{{asset('/image/kairo2.png')}}" id = jangkengResultImage class='img-fluid mx-auto d-block'>
                     <br>
                     <br>
                     
