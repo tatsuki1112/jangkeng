@@ -14,7 +14,7 @@ function jangkeng() {
         htmlChange(result);
 
         $('#modal1').modal('show');
-        
+
         alert(`cp1Win=${result[0]}\ncp2Win=${result[1]}\ngu=${result[2]}\nchoki=${result[3]}\npah=${result[4]}\naiko=${result[5]}\nPowerful=${result[6]}`);
 
     }else{
@@ -30,12 +30,12 @@ function jangkeng() {
         let pah = 0;
         let aiko = 0;
         let opt = {};
-        let optr = {};
-        let powerful
+
+        let powerful;
         while(counter < times){
             const cp1 = Math.floor(Math.random()*3);
             const cp2 = Math.floor(Math.random()*3);
-            
+
             if(cp1 == 0 && cp2 == 1){
                 cp1Win += 1;
                 gu += 1;
@@ -66,22 +66,22 @@ function jangkeng() {
             }
 
             counter += 1;
-        
+
         }
         opt = {"gu":gu, "choki":choki, "pah":pah, "aiko":aiko};
-       
+
         powerful = Math.max(opt["gu"], opt["choki"], opt["pah"]);
-        
+
         const result = Object.keys(opt).reduce((r, key)=> {
             return opt[key] === powerful ? key:r
-        }, null)
-        
-        
+        }, null);
+
+
         //console.log(opt);
 
         return [cp1Win, cp2Win, gu, choki, pah, aiko, result, times];
-        
-    
+
+
     }
 
     function htmlChange(result) {
@@ -96,7 +96,7 @@ function jangkeng() {
         } else if(result[6] === "pah"){
             image = "pahKairo.png";
             hand = "パー";
-    
+
         }
         let src = $('.modal-body').children('img').attr('src');
         src = src.replace('kairo2.png', image);
@@ -110,7 +110,7 @@ function jangkeng() {
         $('.result > #chokiResult').text(result[3]);
         $('.result > #pahResult').text(result[4]);
         }
-    
 
-    
+
+
 }
