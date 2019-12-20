@@ -15,6 +15,8 @@ function jangkeng() {
 
         $('#modal1').modal('show');
 
+        setResult(result);
+
         alert(`cp1Win=${result[0]}\ncp2Win=${result[1]}\ngu=${result[2]}\nchoki=${result[3]}\npah=${result[4]}\naiko=${result[5]}\nPowerful=${result[6]}`);
 
     }else{
@@ -27,6 +29,7 @@ function jangkeng() {
         let cp2Win = 0;
         let gu = 0;
         let choki = 0;
+
         let pah = 0;
         let aiko = 0;
         let opt = {};
@@ -110,6 +113,44 @@ function jangkeng() {
         $('.result > #chokiResult').text(result[3]);
         $('.result > #pahResult').text(result[4]);
         }
+
+    function setResult(result)
+    {
+        $('#sendResult').on('click', function() {
+
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url:'inspect',
+                type:'POST',
+                dataType:'json',
+                data:{
+                    'trial':result[7],
+                    'aiko':result[5],
+                    'cp1win':result[0],
+                    'cp2win':result[1],
+                    'gu':result[2],
+                    'choki':result[3],
+                    'pah':result[4]
+                }
+            })
+                .done(function() {
+                    $('#modal1').modal('hide');
+                    // location.reload();
+
+                })
+                .fail(function(){
+                    $('#modal1').modal('hide');
+                    // location.reload();
+                })
+
+        });
+
+    }
+
+
+
 
 
 

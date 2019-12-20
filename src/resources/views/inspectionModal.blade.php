@@ -1,4 +1,4 @@
-php
+
 <div class="modal fade" tabindex="-1" role="dialog" id="modal1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -17,12 +17,12 @@ php
 
                     <h3 class="result">試行回数:<span id="trialResult" class="hiliteResult"></span>回</h3>
                     <h3 class="result">あいこ:<span id="aikoResult" class="hiliteResult"></span>回</h3>
-                    <h3 class="result">CPU1は<span id="cp1Result" class="hiliteResult"></span>回勝ちました</h3>
-                    <h3 class="result">CPU2は<span id="cp2Result" class="hiliteResult"></span>回勝ちました</h3>
+                    <h3 class="result">COM1は<span id="cp1Result" class="hiliteResult"></span>回勝ちました</h3>
+                    <h3 class="result">COM2は<span id="cp2Result" class="hiliteResult"></span>回勝ちました</h3>
                     <h3 class="result">グーで<span id="guResult" class="hiliteResult"></span>回</h3>
                     <h3 class="result">チョキで<span id="chokiResult" class="hiliteResult"></span>回</h3>
                     <h3 class="result">パーで<span id="pahResult" class="hiliteResult"></span>回勝ちました！</h3>
-
+                    <button type="button" class="sendResult" id="sendResult">ajax</button>
 
                 </div>
             </div>

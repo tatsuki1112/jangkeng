@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
 class CreateResultsTable extends Migration
 {
     /**
@@ -19,8 +20,10 @@ class CreateResultsTable extends Migration
             $table->integer('gu');
             $table->integer('choki');
             $table->integer('pah');
+            $table->integer('aiko');
             $table->integer('cp1win');
             $table->integer('cp2win');
+
             $table->timestamps();
         });
     }

@@ -11,19 +11,19 @@
             <img src="{{ asset('/image/robotsBG.png')}}" class='img-fluid mx-auto d-block'>
             <br>
             <div class="coutainer-fluid">
-         
+
                     <br>
                     <div class="form-group">
                             <input type="number" class="form-control form-control-lg" id="trial" placeholder="回数を入力">
                     </div>
-                    
+
                     <br>
                     <!--<button type="button" class="btn3" data-toggle="modal" data-target="#modal1">-->
                     <button type="button" class="btn3" onClick = "jangkeng();">
                         <span class='else'>じゃんけん!!!!</span>
                     </button>
 
-                        @include('inspectionModal')
+                     @include('inspectionModal')
 
             </div>
        </div>

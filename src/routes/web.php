@@ -22,3 +22,5 @@ Route::get('/inspect', function (){
 Route::get('/judge', function () {
     return view('judge');
 });
+
+Route::post('/inspect', 'ResultsController@setResults');
