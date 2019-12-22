@@ -23,69 +23,7 @@ function jangkeng() {
         alert("数値を入力してください");
     }
 
-    function jangkenning(times) {
-        let counter = 0;
-        let cp1Win = 0;
-        let cp2Win = 0;
-        let gu = 0;
-        let choki = 0;
 
-        let pah = 0;
-        let aiko = 0;
-        let opt = {};
-
-        let powerful;
-        while(counter < times){
-            const cp1 = Math.floor(Math.random()*3);
-            const cp2 = Math.floor(Math.random()*3);
-
-            if(cp1 == 0 && cp2 == 1){
-                cp1Win += 1;
-                gu += 1;
-            }
-            else if(cp1 == 1 && cp2 == 2){
-                cp1Win += 1;
-                choki += 1;
-            }
-            else if(cp1 == 2 && cp2 == 2){
-                cp1Win += 1;
-                pah += 1;
-            }
-            else if(cp1 == cp2){
-                counter -= 1;
-                aiko += 1;
-            }
-            else if(cp2 == 0 && cp1 == 1){
-                cp2Win += 1;
-                gu += 1;
-            }
-            else if(cp2 ==1 && cp1 == 2){
-                cp2Win += 1;
-                choki += 1;
-            }
-            else if(cp2 == 2 && cp1 ==0){
-                cp2Win += 1;
-                pah += 1;
-            }
-
-            counter += 1;
-
-        }
-        opt = {"gu":gu, "choki":choki, "pah":pah, "aiko":aiko};
-
-        powerful = Math.max(opt["gu"], opt["choki"], opt["pah"]);
-
-        const result = Object.keys(opt).reduce((r, key)=> {
-            return opt[key] === powerful ? key:r
-        }, null);
-
-
-        //console.log(opt);
-
-        return [cp1Win, cp2Win, gu, choki, pah, aiko, result, times];
-
-
-    }
 
     function htmlChange(result) {
         let image;
@@ -114,40 +52,7 @@ function jangkeng() {
         $('.result > #pahResult').text(result[4]);
         }
 
-    function setResult(result)
-    {
-        $('#sendResult').on('click', function() {
 
-            $.ajax({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                url:'inspect',
-                type:'POST',
-                dataType:'json',
-                data:{
-                    'trial':result[7],
-                    'aiko':result[5],
-                    'cp1win':result[0],
-                    'cp2win':result[1],
-                    'gu':result[2],
-                    'choki':result[3],
-                    'pah':result[4]
-                }
-            })
-                .done(function() {
-                    $('#modal1').modal('hide');
-                    // location.reload();
-
-                })
-                .fail(function(){
-                    $('#modal1').modal('hide');
-                    // location.reload();
-                })
-
-        });
-
-    }
 
 
 
@@ -155,3 +60,104 @@ function jangkeng() {
 
 
 }
+
+function jangkenning(times) {
+    let counter = 0;
+    let cp1Win = 0;
+    let cp2Win = 0;
+    let gu = 0;
+    let choki = 0;
+
+    let pah = 0;
+    let aiko = 0;
+    let opt = {};
+
+    let powerful;
+    while(counter < times){
+        const cp1 = Math.floor(Math.random()*3);
+        const cp2 = Math.floor(Math.random()*3);
+
+        if(cp1 == 0 && cp2 == 1){
+            cp1Win += 1;
+            gu += 1;
+        }
+        else if(cp1 == 1 && cp2 == 2){
+            cp1Win += 1;
+            choki += 1;
+        }
+        else if(cp1 == 2 && cp2 == 2){
+            cp1Win += 1;
+            pah += 1;
+        }
+        else if(cp1 == cp2){
+            counter -= 1;
+            aiko += 1;
+        }
+        else if(cp2 == 0 && cp1 == 1){
+            cp2Win += 1;
+            gu += 1;
+        }
+        else if(cp2 ==1 && cp1 == 2){
+            cp2Win += 1;
+            choki += 1;
+        }
+        else if(cp2 == 2 && cp1 ==0){
+            cp2Win += 1;
+            pah += 1;
+        }
+
+        counter += 1;
+
+    }
+    opt = {"gu":gu, "choki":choki, "pah":pah, "aiko":aiko};
+
+    powerful = Math.max(opt["gu"], opt["choki"], opt["pah"]);
+
+    const result = Object.keys(opt).reduce((r, key)=> {
+        return opt[key] === powerful ? key:r
+    }, null);
+
+
+    //console.log(opt);
+
+    return [cp1Win, cp2Win, gu, choki, pah, aiko, result, times];
+
+
+}
+
+function setResult(result)
+{
+    $('#sendResult').on('click', function() {
+
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url:'inspect',
+            type:'POST',
+            dataType:'json',
+            data:{
+                'trial':result[7],
+                'aiko':result[5],
+                'cp1win':result[0],
+                'cp2win':result[1],
+                'gu':result[2],
+                'choki':result[3],
+                'pah':result[4]
+            }
+        })
+            .done(function() {
+                $('#modal1').modal('hide');
+                // location.reload();
+
+            })
+            .fail(function(){
+                $('#modal1').modal('hide');
+                // location.reload();
+            })
+
+    });
+
+}
+
+

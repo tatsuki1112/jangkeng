@@ -38,7 +38,7 @@ body {
     background: orange;
     border-radius: 4px;
     box-shadow: inset 0 2px rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-    font-weight: 'bold';
+    font-weight: bold;
     border: solid 2px orange;
     margin: 0 auto;
     width: 100%;
@@ -55,7 +55,7 @@ body {
     background: #0584ec;
     border-radius: 4px;
     box-shadow: inset 0 2px rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-    font-weight: 'bold';
+    font-weight: bold;
     border: solid 2px #0584ec;
     margin: 0 auto;
     width: 100%;
@@ -71,7 +71,7 @@ body {
     background: red;
     border-radius: 4px;
     box-shadow: inset 0 2px rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-    font-weight: 'bold';
+    font-weight: bold;
     border: solid 2px orange;
     margin: 0 auto;
     width: 100%;
@@ -122,4 +122,16 @@ h1 {
     font-family: serif;
     font-weight: bolder;
     color:red;
+}
+
+.sendResult {
+    text-align: center;
+    font-family: serif;
+    font-weight: bolder;
+    font-size: 2em;
+    color:white;
+    background-color: red;
+    border-style: none;
+    width: 100%;
+    height: 80px;
 }

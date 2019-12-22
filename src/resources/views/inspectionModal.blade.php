@@ -22,7 +22,7 @@
                     <h3 class="result">グーで<span id="guResult" class="hiliteResult"></span>回</h3>
                     <h3 class="result">チョキで<span id="chokiResult" class="hiliteResult"></span>回</h3>
                     <h3 class="result">パーで<span id="pahResult" class="hiliteResult"></span>回勝ちました！</h3>
-                    <button type="button" class="sendResult" id="sendResult">ajax</button>
+                    <button type="button" class="sendResult" id="sendResult">戻る!!!!!</button>
 
                 </div>
             </div>

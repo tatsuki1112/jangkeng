@@ -13,5 +13,6 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .scripts('resources/js/jangkeng.js', 'public/js/jangkeng.js')
+    .scripts('resources/js/judge.js', 'public/js/judge.js')
     .sass('resources/sass/app.scss', 'public/css');
-    
+

@@ -26,13 +26,13 @@
                             <input type="number" class="form-control form-control-lg" id="trial" placeholder="回数を入力">
                         </div>
                     </div>
-                    <br>
-                    <button type="submit" class="btn3">
+
+                    <button type="submit" class="btn3" onclick="judge();">
                         <span class='else'>じゃんけん!!!!</span>
                     </button>
-                </form> 
+                </form>
                 <br>
-                
+
             </div>
        </div>
        <div class='col-sm-1 col-md-3'></div>
