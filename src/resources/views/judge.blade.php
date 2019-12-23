@@ -11,8 +11,8 @@
             <img src="{{ asset('/image/robotsBG.png')}}" class='img-fluid mx-auto d-block'>
             <br>
             <div class="coutainer-fluid">
-                <form action="{{url('/inspect')}}" method="POST">
-                @csrf
+               <!--<form action="{{url('/inspect')}}" method="POST">-->
+                <!--@csrf-->
                     <div class="form-row">
                         <div class="col-md-6">
                             <input type="txt" id="player1" class="form-control form-control-lg" placeholder="おなまえ1">
@@ -27,15 +27,16 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn3" onclick="judge();">
+                    <button type="button" class="btn3" onclick="judge();">
                         <span class='else'>じゃんけん!!!!</span>
                     </button>
-                </form>
+{{--                </form>--}}
+            @include('judgeModal')
                 <br>
 
             </div>
        </div>
        <div class='col-sm-1 col-md-3'></div>
-    </div>
+
 </body>
 @endsection

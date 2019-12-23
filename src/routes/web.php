@@ -23,4 +23,6 @@ Route::get('/judge', function () {
     return view('judge');
 });
 
+Route::get('/total', 'ResultsController@getResults');
+
 Route::post('/inspect', 'ResultsController@setResults');

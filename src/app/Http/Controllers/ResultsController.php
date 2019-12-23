@@ -27,4 +27,14 @@ class ResultsController extends Controller
 
     }
 
+    public function getResults(Request $request)
+    {
+        $totalTrial = Result::sum('trial');
+        $totalGu = Result::sum('gu');
+        $totalChoki = Result::sum('choki');
+        $totalPah = Result::sum('pah');
+        $totalMax = Result::max('trial');
+        return view('total', compact('totalTrial','totalGu', 'totalChoki', 'totalPah', 'totalMax'));
+    }
+
 }
