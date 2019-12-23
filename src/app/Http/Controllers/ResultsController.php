@@ -34,6 +34,8 @@ class ResultsController extends Controller
         $totalChoki = Result::sum('choki');
         $totalPah = Result::sum('pah');
         $totalMax = Result::max('trial');
+
+
         return view('total', compact('totalTrial','totalGu', 'totalChoki', 'totalPah', 'totalMax'));
     }
 

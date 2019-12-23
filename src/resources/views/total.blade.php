@@ -9,27 +9,20 @@
         <div class='col-sm-1 col-md-3'></div>
         <div class='col-sm-12 col-md-6'>
             <img src="{{ asset('/image/robotsBG.png')}}" class='img-fluid mx-auto d-block'>
-            <h4>総回数{{$totalTrial}}</h4>
+            <h2 class="total">総回数<br><span class="hiliteTotal">{{$totalTrial}}</span>回!!!</h2>
             <br>
-            <h4>グー{{$totalGu}}</h4>
+            <h2 class="total">グー総回数<br><span class="hiliteTotal">{{$totalGu}}</span>回!!!</h2>
             <br>
-            <h4>ちょき{{$totalChoki}}</h4>
+            <h2 class="total">チョキ総回数<br><span class="hiliteTotal">{{$totalChoki}}</span>回!!!</h2>
             <br>
-            <h4>パー{{$totalPah}}</h4>
+            <h2 class="total">パー総回数<br><span class="hiliteTotal">{{$totalPah}}</span>回!!!</h2>
             <br>
-            <h4>最大{{$totalMax}}</h4>
+            <h2 class="total">最大回数<br><span class="hiliteTotal">{{$totalMax}}</span>回!!!</h2>
             <br>
             <div class="coutainer-fluid">
 
-                <br>
-                <div class="form-group">
-                    <input type="number" class="form-control form-control-lg" id="trial" placeholder="回数を入力">
-                </div>
-
-                <br>
-                <!--<button type="button" class="btn3" data-toggle="modal" data-target="#modal1">-->
-                <button type="button" class="btn3" onClick = "jangkeng();">
-                    <span class='else'>じゃんけん!!!!</span>
+                <button type="button" class="btn3" onClick = "History.back();">
+                    <span class='else'>戻る!!!!</span>
                 </button>
 
 

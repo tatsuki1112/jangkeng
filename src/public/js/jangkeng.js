@@ -17,7 +17,7 @@ function jangkeng() {
 
         setResult(result);
 
-        alert(`cp1Win=${result[0]}\ncp2Win=${result[1]}\ngu=${result[2]}\nchoki=${result[3]}\npah=${result[4]}\naiko=${result[5]}\nPowerful=${result[6]}`);
+        // alert(`cp1Win=${result[0]}\ncp2Win=${result[1]}\ngu=${result[2]}\nchoki=${result[3]}\npah=${result[4]}\naiko=${result[5]}\nPowerful=${result[6]}`);
 
     }else{
         alert("数値を入力してください");
@@ -148,12 +148,12 @@ function setResult(result)
         })
             .done(function() {
                 $('#modal1').modal('hide');
-                // location.reload();
+                 location.reload();
 
             })
             .fail(function(){
                 $('#modal1').modal('hide');
-                // location.reload();
+                location.reload();
             })
 
     });
