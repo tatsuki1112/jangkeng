@@ -21,9 +21,12 @@
             <br>
             <div class="coutainer-fluid">
 
-                <button type="button" class="btn3" onClick = "History.back();">
-                    <span class='else'>戻る!!!!</span>
-                </button>
+                <form action="{{url('/')}}"method="GET">
+                    <button type="submit" class="btn1">
+                        <span class='else'>戻る!!!!</span>
+                    </button>
+                </form>
+
 
 
             </div>
